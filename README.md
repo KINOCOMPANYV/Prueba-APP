@@ -1,4 +1,4 @@
-# Kino Company - Estrategia Digital 2025
+# Kino Company - Estrategia Digital 2026
 
 ![Kino Company](./portada.jfif)
 
