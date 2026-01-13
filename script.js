@@ -265,6 +265,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
             }
         });
+
+        // Update bottom nav (mobile)
+        const bottomNavItems = document.querySelectorAll('.bottom-nav .nav-item');
+        bottomNavItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === '#' + currentSection) {
+                item.classList.add('active');
+            }
+        });
     }
 
     // ============================================
