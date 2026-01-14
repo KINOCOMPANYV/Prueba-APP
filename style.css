@@ -1285,45 +1285,58 @@ html {
    ============================================ */
 .bottom-nav {
     display: none;
-    /* Oculto por defecto en desktop */
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 400px;
-    height: 60px;
-    background: rgba(10, 10, 10, 0.85);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
+    background: rgba(15, 15, 15, 0.95);
+    padding: 10px 25px;
+    border-radius: 50px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
-    justify-content: space-around;
-    align-items: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    padding: 0 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Flexible width for labels */
+    width: 95%;
+    max-width: 450px;
+    justify-content: space-between;
 }
 
-.bottom-nav .nav-item {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 20px;
-    width: 45px;
-    height: 45px;
+.nav-item {
+    color: #888;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    text-decoration: none;
+    gap: 4px;
+    padding: 5px;
 }
 
-.bottom-nav .nav-item.active {
-    color: #fff;
-    background: var(--kino-red);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(227, 33, 25, 0.4);
+.nav-item i {
+    font-size: 20px;
 }
+
+.nav-label {
+    font-size: 10px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: var(--kino-red);
+}
+
+.nav-item.active .nav-label {
+    opacity: 1;
+    font-weight: 700;
+}
+
+
 
 .bottom-nav .nav-item:active {
     transform: scale(0.9);
